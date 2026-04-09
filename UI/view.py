@@ -33,7 +33,7 @@ class View(ft.UserControl):
                               options=[ft.dropdown.Option("I"), ft.dropdown.Option("II")], width=200)
         self.btnPrintCorsiPD = ft.ElevatedButton(text="Stampa Corsi", on_click=self._controller.handlePrintCorsiPD, width=300)
         self.btnPrintIscrittiCorsiPD = ft.ElevatedButton(text="Stampa numero Iscritto", on_click=self._controller.handlePrintIscrittiCorsiPD, width=300)
-        row1 = ft.Row([self.ddPD,self.btnPrintCorsiPD,self.btnPrintIscrittiCorsiPD])
+        row1 = ft.Row([self.ddPD,self.btnPrintCorsiPD,self.btnPrintIscrittiCorsiPD], alignment=ft.MainAxisAlignment.CENTER)
 
         #ROW2
         self.ddCodins= ft.Dropdown(label = "Corso", width=200)
@@ -43,7 +43,7 @@ class View(ft.UserControl):
         self.btnPrintCDSCodins = ft.ElevatedButton ( text="Stampa CDS afferenti",
                                                          on_click=self._controller.handlePrintCDSCodins, width=300)
 
-        row2 = ft.Row([self.ddCodins, self.btnPrintIscrittiCodins, self.btnPrintCDSCodins])
+        row2 = ft.Row([self.ddCodins, self.btnPrintIscrittiCodins, self.btnPrintCDSCodins], alignment=ft.MainAxisAlignment.CENTER)
 
         self._page.add(row1, row2)
 
